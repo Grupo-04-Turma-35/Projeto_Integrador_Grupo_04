@@ -1,10 +1,14 @@
 package org.generation.projeto.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -24,8 +28,10 @@ public class Tema {
 	@Size(min = 5, max = 500, message = "O texto precisa conter de 5 a 500 caracteres")
 	private String descricaoTema;
 	
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long qtdTema;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataTema = new java.sql.Date(System.currentTimeMillis());
 
 	public long getIdTema() {
 		return idTema;
@@ -57,6 +63,14 @@ public class Tema {
 
 	public void setQtdTema(long qtdTema) {
 		this.qtdTema = qtdTema;
+	}
+
+	public Date getDataTema() {
+		return dataTema;
+	}
+
+	public void setDataTema(Date dataTema) {
+		this.dataTema = dataTema;
 	}
 
 }
