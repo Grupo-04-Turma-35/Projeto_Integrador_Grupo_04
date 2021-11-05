@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -20,11 +20,11 @@ public class Tema {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idTema;
 	
-	@NotNull(message = "O título do tema é obrigatório")
+	@NotBlank(message = "O título do tema é obrigatório")
 	@Size(min = 5, max = 100, message = "O título precisa conter de 5 a 100 caracteres")
 	private String tituloTema;
 	
-	@NotNull(message = "O texto do tema é obrigatório")
+	@NotBlank(message = "O texto do tema é obrigatório")
 	@Size(min = 5, max = 500, message = "O texto precisa conter de 5 a 500 caracteres")
 	private String descricaoTema;
 	
