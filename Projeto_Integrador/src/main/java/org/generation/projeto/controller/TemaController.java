@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/tema")
+@RequestMapping("/temas")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TemaController {
 	
@@ -39,7 +39,7 @@ public class TemaController {
 	
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<Tema>> getByTitulo(@PathVariable String titulo){
-		return ResponseEntity.ok(repository.findAllByTituloTemaContainingIgnoreCase(titulo));
+		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
 	@PostMapping

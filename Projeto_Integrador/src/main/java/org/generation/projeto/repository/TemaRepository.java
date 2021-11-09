@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TemaRepository extends JpaRepository<Tema, Long>{
 	
-	public List<Tema> findAllByTituloTemaContainingIgnoreCase(String tituloTema); 
+	public List<Tema> findAllByTituloContainingIgnoreCase(String titulo); 
 }

@@ -23,14 +23,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema",
+					"raw": "http://localhost:8080/temas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema"
+						"temas"
 					]
 				}
 			},
@@ -54,14 +54,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema/1",
+					"raw": "http://localhost:8080/temas/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema",
+						"temas",
 						"1"
 					]
 				}
@@ -86,14 +86,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema/titulo/fo",
+					"raw": "http://localhost:8080/temas/titulo/fo",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema",
+						"temas",
 						"titulo",
 						"fo"
 					]
@@ -108,7 +108,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"tituloTema\":\"Folclore\",\r\n    \"descricaoTema\":\"Este tema trata-se sobre histórias, lendas e mitos indígenas.\"\r\n}",
+					"raw": "{\r\n    \"titulo\":\"Folclore\",\r\n    \"descricao\":\"Este tema trata-se sobre histórias, lendas e mitos indígenas.\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -116,14 +116,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema",
+					"raw": "http://localhost:8080/temas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema"
+						"temas"
 					]
 				}
 			},
@@ -136,7 +136,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"tituloTema\":\"Culinária\",\r\n    \"descricaoTema\":\"Esse tema trata-se de todo tipo de culinária, podendo compartilhar todo tipo de receitas\"\r\n}",
+					"raw": "{\r\n    \"titulo\":\"Culinária\",\r\n    \"descricao\":\"Esse tema trata-se de todo tipo de culinária, podendo compartilhar todo tipo de receitas\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -144,14 +144,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema",
+					"raw": "http://localhost:8080/temas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema"
+						"temas"
 					]
 				}
 			},
@@ -164,7 +164,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"tituloTema\":\"Povos\",\r\n    \"descricaoTema\":\"Local onde os usuarios podem ter contato ou adicionar diferentes informações sobre os povos indígenas\"\r\n}",
+					"raw": "{\r\n    \"titulo\":\"Povos\",\r\n    \"descricao\":\"Local onde os usuarios podem ter contato ou adicionar diferentes informações sobre os povos indígenas\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -172,14 +172,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema",
+					"raw": "http://localhost:8080/temas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema"
+						"temas"
 					]
 				}
 			},
@@ -192,7 +192,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"tituloTema\":\"Educação\",\r\n    \"descricaoTema\":\"Área para tratar diversas formas de educação e interação entre usuários.\"\r\n}",
+					"raw": "{\r\n    \"titulo\":\"Educação\",\r\n    \"descricao\":\"Área para tratar diversas formas de educação e interação entre usuários.\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -200,14 +200,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema",
+					"raw": "http://localhost:8080/temas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema"
+						"temas"
 					]
 				}
 			},
@@ -220,7 +220,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idTema\":4,\r\n    \"tituloTema\":\"Educação\",\r\n    \"descricaoTema\":\"Uma área onde os usuários indígenas e não indígenas podem partilhar seus conhecimentos relacionados a educação.\"\r\n}",
+					"raw": "{\r\n    \"idtema\":4,\r\n    \"titulo\":\"Educação\",\r\n    \"descricao\":\"Uma área onde os usuários indígenas e não indígenas podem partilhar seus conhecimentos relacionados a educação.\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -228,14 +228,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema",
+					"raw": "http://localhost:8080/temas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema"
+						"temas"
 					]
 				}
 			},
@@ -256,14 +256,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/tema/5",
+					"raw": "http://localhost:8080/temas/5",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"tema",
+						"temas",
 						"5"
 					]
 				}
