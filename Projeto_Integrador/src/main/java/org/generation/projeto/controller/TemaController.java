@@ -2,6 +2,8 @@ package org.generation.projeto.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.generation.projeto.model.Tema;
 import org.generation.projeto.repository.TemaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/temas")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "", allowedHeaders = "")
 public class TemaController {
 	
 	@Autowired
@@ -43,18 +45,27 @@ public class TemaController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Tema> postTema(@RequestBody Tema tema){
+	public ResponseEntity<Tema> postTema(@Valid @RequestBody Tema tema){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tema));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Tema> putTema(@RequestBody Tema tema){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(tema));
+	public ResponseEntity<Tema> putTema(@Valid @RequestBody Tema tema){
+		return repository.findById(tema.getIdtema())
+				.map(resposta -> {
+					return ResponseEntity.ok().body(repository.save(tema));
+				})
+				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deleteTema(@PathVariable long id) {
-		repository.deleteById(id);
+	public ResponseEntity<?> deleteTema(@PathVariable long id) {
+		return repository.findById(id)
+				.map(resposta -> {
+					repository.deleteById(id);
+					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+				})
+				.orElse(ResponseEntity.notFound().build());
 	}
 
 }
