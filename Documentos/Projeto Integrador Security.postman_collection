@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "ff42e70f-025d-4ef4-b0ca-400058e1e291",
+		"name": "Projeto Integrador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01 - Usuarios",
+			"item": [
+				{
+					"name": "Post Usuario Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Nathalia Lisboa\",\r\n    \"email\":\"nathalia@email.com\",\r\n    \"senha\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/cadastrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Usuario Logar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuariologin\":\"nathalia@email.com\",\r\n    \"senhalogin\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/logar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"logar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/usuarios/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Usuario Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idusuario\": 1,\r\n    \"nome\": \"Nathalia Lisboa\",\r\n    \"email\":\"nathalialisboa@email.com\",\r\n    \"senha\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Usuario Logar Atualizado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuariologin\":\"nathalialisboa@email.com\",\r\n    \"senhalogin\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/logar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"logar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Usuarios Atualizado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/usuarios/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "02 - Temas",
+			"item": [
+				{
+					"name": "Get Tema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tema ById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Tema ByTitulo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas/titulo/fo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								"titulo",
+								"fo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Tema 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"Folclore\",\r\n    \"descricao\":\"Este tema trata-se sobre histórias, lendas e mitos indígenas.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Tema 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"Culinária\",\r\n    \"descricao\":\"Esse tema trata-se de todo tipo de culinária, podendo compartilhar todo tipo de receitas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Tema 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"Povos\",\r\n    \"descricao\":\"Local onde os usuarios podem ter contato ou adicionar diferentes informações sobre os povos indígenas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Tema 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"Educação\",\r\n    \"descricao\":\"Área para tratar diversas formas de educação e interação entre usuários.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Tema  4",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idtema\": 4,\r\n    \"titulo\":\"Educação\",\r\n    \"descricao\":\"Uma área onde os usuários indígenas e não indígenas podem partilhar seus conhecimentos relacionados a educação.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tema",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "03 - Postagens",
+			"item": [
+				{
+					"name": "Get Postagem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Postagem ById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Postagem ByTitulo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens/titulo/c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"titulo",
+								"c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Postagem 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Receita de tanajura\",\r\n    \"texto\": \"Receita de tanajura da casa, com farofa e azeite feito expecificamente pelos indigenas\",\r\n    \"tema\": {\r\n        \"idtema\": 2\r\n    },\r\n    \"usuario\":{\r\n        \"idusuario\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Postagem 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Lenda da Yara\",\r\n    \"texto\": \"Iara era uma índia admirada pela sua beleza e também pelo fato de ser uma grande guerreira. Invejosos, seus irmãos resolveram matá-la, mas sendo uma guerreira habilidosa, consegue vencer a luta e é ela quem os mata. Com medo de ser punida pelo pajé da tribo, foge. O pajé era seu pai, o qual após encontrar Iara resolve castigá-la lançando-a ao rio para que ela morresse, tal como seus irmãos. No entanto, os peixes salvam a índia, a qual se transforma numa bela sereia que passa a habitar os rios da região da Amazônia. Atraindo os homens para lá, tenta afogá-los. Segundo a lenda, quem consegue escapar, enlouquece e somente pode ser curado por um pajé.\",\r\n    \"tema\": {\r\n        \"idtema\": 1\r\n    },\r\n    \"usuario\":{\r\n        \"idusuario\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Postagem 1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idpostagem\": 1,\r\n    \"titulo\": \"Receita de mandioca com garu\",\r\n    \"texto\": \"Receita de mandioca com garu é feita através de um incrível molho branco com mandioca\",\r\n    \"tema\": {\r\n        \"idtema\": 2\r\n    },\r\n    \"usuario\":{\r\n        \"idusuario\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Postagem",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bmF0aGFsaWFsaXNib2FAZW1haWwuY29tOjEyMzQ1Njc4OQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
