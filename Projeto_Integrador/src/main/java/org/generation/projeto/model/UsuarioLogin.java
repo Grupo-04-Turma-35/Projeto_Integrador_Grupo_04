@@ -11,6 +11,12 @@ public class UsuarioLogin {
 	private String senhalogin;
 
 	private String token;
+	
+	private String fotologin;
+	
+	private String tipologin;
+	
+	
 
 	public long getIdlogin() {
 		return idlogin;
@@ -51,6 +57,23 @@ public class UsuarioLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
+
+	public String getFotologin() {
+		return fotologin;
+	}
+
+	public void setFotologin(String fotologin) {
+		this.fotologin = fotologin;
+	}
+
+	public String getTipologin() {
+		return tipologin;
+	}
+
+	public void setTipologin(String tipologin) {
+		this.tipologin = tipologin;
+	}
+
 	
 	
 
