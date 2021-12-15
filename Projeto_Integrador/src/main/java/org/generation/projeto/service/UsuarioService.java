@@ -18,35 +18,27 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 	
 	public Optional<Usuario> cadastrarUsuario(Usuario usuario){
-		
 		if(usuarioRepository.findByEmail(usuario.getEmail()).isPresent())
 			return Optional.empty();
-		
 		usuario.setSenha(criptografarSenha(usuario.getSenha()));
-			return Optional.of(usuarioRepository.save(usuario));
+		return Optional.of(usuarioRepository.save(usuario));
 	}
 
-	public Optional<Usuario> atualizarUsuario(Usuario usuario){
-		
+	public Optional<Usuario> atualizarUsuario(Usuario usuario){		
 		if(usuarioRepository.findById(usuario.getIdusuario()).isPresent()) {
-			
 			Optional<Usuario> buscaUsuario = usuarioRepository.findByEmail(usuario.getEmail());
-			
 			if(buscaUsuario.isPresent()) {
-				if (buscaUsuario.get().getIdusuario() != usuario.getIdusuario())
+				if(buscaUsuario.get().getIdusuario() != usuario.getIdusuario())
 					return Optional.empty();
 			}
-			
 			usuario.setSenha(criptografarSenha(usuario.getSenha()));
-				return Optional.of(usuarioRepository.save(usuario));
+			return Optional.of(usuarioRepository.save(usuario));
 		}
-		
 		return Optional.empty();
 	}
 	 
 	public Optional<UsuarioLogin> autenticarUsuario(Optional<UsuarioLogin> usuarioLogin){
 		Optional<Usuario> usuario = usuarioRepository.findByEmail(usuarioLogin.get().getUsuariologin());
-		
 		if(usuario.isPresent()) {
 			if(compararSenhas(usuarioLogin.get().getSenhalogin(), usuario.get().getSenha())) {
 				

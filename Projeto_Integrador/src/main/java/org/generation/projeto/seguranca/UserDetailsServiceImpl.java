@@ -21,6 +21,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		Optional<Usuario> user = usuarioRepository.findByEmail(username);
 		user.orElseThrow(() -> new UsernameNotFoundException(username + " não encontrado."));
 		
-		return user.map(UserDetailsImpl :: new).get();
+		return user.map(UserDetailsImpl::new).get();
 	}
 }
