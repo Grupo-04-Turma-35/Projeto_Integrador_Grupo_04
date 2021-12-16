@@ -30,6 +30,8 @@ public class Postagem {
 	@NotBlank(message = "O texto é obrigatório")
 	@Size(min = 20, max = 10000, message = "O texto precisa ter entre 20 a 10000 caracteres")
 	private String texto;
+	
+	private String imagem;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date datapostagem = new java.sql.Date(System.currentTimeMillis());
@@ -67,6 +69,14 @@ public class Postagem {
 
 	public void setTexto(String texto) {
 		this.texto = texto;
+	}
+	
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 	public Date getDatapostagem() {
